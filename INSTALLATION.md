@@ -30,6 +30,7 @@ The object:
 		"z": 1
 	},
 	"showInInventory": false
-}```
+}
+```
 
 4. Profit
