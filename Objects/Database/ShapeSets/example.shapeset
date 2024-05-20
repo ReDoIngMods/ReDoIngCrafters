@@ -1,6 +1,6 @@
 {
 	"partList": [
-	{
+		{
 			"uuid": "e9876e77-a07d-43da-86c9-dfee396f125f",
 			"name": "gui_locked_recipe",
 			"renderable": {

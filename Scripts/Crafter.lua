@@ -1,3 +1,35 @@
+-- ###################################
+-- # ReDoIng Crafters - ReDoIng Mods #
+-- # Snippet from "Crashlander"		 #
+-- # Created by Crashlander Dev Team #
+-- # Adapted by ReDoIng Mods		 #
+-- ###################################
+--This is the main file of this sample mod. It contains the modified vanilla craftbot script and is a light modification of the Craftbot.lua found in "Crashlander".
+--Feel free to modify this code any way which suits you!
+
+--Sample crafters Item
+--[[
+	[tostring( "uuid of the crafter" )] = {
+		needsPower = false, -- Whether or not the crafter needs power (activation signal), untested
+		slots = 2, -- Amount of unlocked slots (max 8)
+		speed = 1, -- The crafting speed multiplier (doesn't multiply the 3 additional seconds added due to animations)
+		level = 1, -- The currect crafter level (optional)
+		upgrade = tostring( obj_craftbot_craftbot2 ), -- The next upgrade uuid (required for "automatic locked slot level population") (optional)
+		upgradeCost = 5, -- How many Component Kits the upgrade should take (optional)
+		recipeSets = { -- Available recipe sets
+			{ name = "craftbot", locked = false }
+		},
+		
+		title = "Shape", -- Crafter title, if set to "Shape" it will copy the name of the shape (optional, defaults to "Craftbot")
+		subTitle = "#{LEVEL} 1", -- Crafter subtitle (optional, defaults to nothing)
+		createGuiFunction = "LuaCraftbotGui", -- either function to call when creating the gui, or set to "LuaCraftbotGui" to use our Lua version
+		background = "$GAME_DATA/Gui/Resolutions/3840x2160/Craftbot/CraftbotBG@4K.png", --The background to be used (optional, defaults to empty background)
+		hideLockedLevels = true, -- If locked levels are hidden (optional)
+		hasVisualization = true, -- Whether or not visualization of the crafted item should play (optional)
+		offset = sm.vec3.new(0.1,0.13,-0.005) -- Offset of crafter effects, like visualization, cancel craft, ... (optional)
+	}
+]]
+
 ---@diagnostic disable: undefined-field, undefined-global, inject-field
 -- Crafter.lua --
 dofile "$SURVIVAL_DATA/Scripts/game/survival_items.lua"
@@ -120,6 +152,15 @@ local crafters = {
 		createGuiFunction = "LuaCraftbotGui",--sm.gui.createCraftBotGui,
 		background = "$GAME_DATA/Gui/Resolutions/3840x2160/Craftbot/CraftbotBG@4K.png",
 	}
+}
+
+-- Add any crafters that should be automated here
+local isCraftbot = {
+	[tostring(obj_craftbot_craftbot1)] = true,
+	[tostring(obj_craftbot_craftbot2)] = true,
+	[tostring(obj_craftbot_craftbot3)] = true,
+	[tostring(obj_craftbot_craftbot4)] = true,
+	[tostring(obj_craftbot_craftbot5)] = true
 }
 
 local effectRenderables = {
@@ -1396,14 +1437,6 @@ function Crafter.client_canInteract( self )
 	return isUsable
 end
 
-local isCraftbot = {
-	[tostring(obj_craftbot_craftbot1)] = true,
-	[tostring(obj_craftbot_craftbot2)] = true,
-	[tostring(obj_craftbot_craftbot3)] = true,
-	[tostring(obj_craftbot_craftbot4)] = true,
-	[tostring(obj_craftbot_craftbot5)] = true
-}
-
 function Crafter.cl_setGuiContainers( self )
 	if isCraftbot[tostring(self.shape.uuid)] == true then
 		local containers = {}
@@ -2148,12 +2181,12 @@ function Crafter.sv_n_collect( self, params, player )
 				self.network:sendToClient( player, "cl_n_fullInv" )
 			end
 
-			sm.effect.playEffect(
+			--[[sm.effect.playEffect(
 				"Crafters - Finish",
 				self.shape.worldPosition + (self.crafter.offset and self.crafter.offset + sm.vec3.new(0,0,0.5) or sm.vec3.new(0,0,0)),
 				sm.vec3.new(0,0,0),
 				sm.quat.fromEuler(sm.vec3.new(90,0,0))
-			)
+			)]]
 
 			if self.crafter.hasVisualization and #self.sv.craftArray == 0 then
 				self.network:sendToClients("cl_hideCraft")

@@ -1,6 +1,14 @@
-dofile("$CONTENT_40639a2c-bb9f-4d4f-b88c-41bfe264ffa8/Scripts/ModDatabase.lua")
+-- ###############################################################
+-- # ReDoIng Crafters - ReDoIng Mods 							#
+-- # Snippet from "The Guild of Scrap Mechanic Modders" server	#
+-- # Created by Vajdani											#
+-- # Adapted by Crashlander Dev Team, ReDoIng Mods				#
+-- ###############################################################
+--This file lets us get all of the required information from the current gamemode and all loaded mods. This is required in order to make our feature which doesn't let the player automate carriable items work. It also lets us display all the rating of all the items. Feel free to extend this code to add any data you might need from the shapesets.
 
---Thanks Vajdani :)
+--Have fun modding!
+
+dofile("$CONTENT_40639a2c-bb9f-4d4f-b88c-41bfe264ffa8/Scripts/ModDatabase.lua")
 
 ---@class ShapeData
 ---@field carryItem boolean
@@ -17,8 +25,6 @@ local function ParseList(list)
 		local stackSize = shape.stackSize or (shape.dif and 256) or 1 --sm.item.isBlock(sm.uuid.new(shape.uuid)) doesn't work, because SM. So i'm using the janky way to get if it is a block (shape.dif) - The Red Builder
         ShapeLibrary[shape.uuid] = {
 			carryItem = shape.carryItem or false,
-			data = shape.scripted and shape.scripted.data or {},
-			stackSize = stackSize,
 			flammable = shape.flammable or false,
 			ratings = {density = shape.ratings and shape.ratings.density or 4, durability = shape.ratings and shape.ratings.durability or 3, friction = shape.ratings and shape.ratings.friction or 6, buoyancy = shape.ratings and shape.ratings.buoyancy or 5}, --gotta do it this way because some *extremely smart* modders (and Axolot themselves) only define some ratings, thanks...
 			physicsMaterial = shape.physicsMaterial
@@ -62,7 +68,7 @@ ModDatabase.unloadShapesets()
 ---@return ShapeData
 function GetShapeData(uuid)
 	local stackSize = sm.item.isBlock(sm.uuid.new(tostring(uuid))) and 256 or 1 -- it works here, as that gets called after the game fully loads
-    return ShapeLibrary[tostring(uuid)] or { carryItem = false, data = {}, stackSize = stackSize, flammable = false, ratings = {
+    return ShapeLibrary[tostring(uuid)] or { carryItem = false, flammable = false, ratings = {
 		density = 4,
 		durability = 3,
 		friction = 6,
