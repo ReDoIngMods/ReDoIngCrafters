@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Button" skin="CraftbotRecipeItemBackground" position_real="0.013020833333333334 0.012962962962962963 0.97291666666666665 0.97222222222222221" name="MainPanel">
+        <Property key="NeedMouse" value="true"/>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.1943254817987152 0.19428571428571428 0.61081370449678796 0.61047619047619051" name="Icon">
+            <Property key="NeedMouse" value="false"/>
+            <Property key="NeedKey" value="false"/>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings/>
+</MyGUI>

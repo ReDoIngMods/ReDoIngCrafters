@@ -1,0 +1,11 @@
+{
+   "baseGameContent": "Survival",
+   "gameScript" : {
+      "class" : "CreativeFlatGame",
+      "file" : "$GAME_DATA/Scripts/game/CreativeGame.lua"
+   },
+   "playerScript" : {
+      "class" : "CreativePlayer",
+      "file" : "$GAME_DATA/Scripts/game/CreativePlayer.lua"
+   }
+}

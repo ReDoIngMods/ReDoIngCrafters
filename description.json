@@ -1,0 +1,16 @@
+{
+   "allow_add_mods" : true,
+   "custom_icons" : false,
+   "description" : "Read the README file! This is a sample.",
+   "localId" : "d91404fa-1b3c-4e6b-a0f3-f062c901cc09",
+   "name" : "ReDoIng Crafters - READ the README!",
+   "type" : "Custom Game",
+   "version" : 0,
+   "dependencies" : [
+      {
+         "fileId" : 2504530003,
+         "localId" : "40639a2c-bb9f-4d4f-b88c-41bfe264ffa8",
+         "name" : "ModDatabase"
+      }
+   ]
+}

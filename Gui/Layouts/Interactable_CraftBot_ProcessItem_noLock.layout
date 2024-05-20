@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="ImageBox" skin="ImageBox" position_real="0.24479166666666666 0.17222222222222222 0.50989583333333333 0.43055555555555558" name="Icon">
+        <Property key="NeedKey" value="false"/>
+    </Widget>
+    <Widget type="Widget" skin="PanelEmpty" position_real="0.15260416666666668 0.62037037037037035 0.67343750000000002 0.18888888888888888" name="ProcessPanel">
+        <Property key="NeedKey" value="false"/>
+        <Widget type="TextBox" skin="TextBox" position_real="0 0 1 0.72549019607843135" name="Time">
+            <Property key="Caption" value="88:88"/>
+            <Property key="FontName" value="SM_NumberSmall"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="NeedKey" value="false"/>
+        </Widget>
+        <Widget type="ProgressBar" skin="CraftbotProgressBar" position_real="0.090487238979118326 0.72549019607843135 0.81747873163186391 0.26960784313725489" name="Progress">
+            <Property key="Range" value="240"/>
+            <Property key="RangePosition" value="120"/>
+            <Property key="NeedKey" value="false"/>
+        </Widget>
+    </Widget>
+    <Widget type="Button" skin="CraftbotRepeat" position_real="0.71406250000000004 0.03425925925925926 0.12239583333333333 0.10277777777777777" name="Repeat">
+        <Property key="NeedKey" value="false"/>
+    </Widget>
+    <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0 0" name="Lock">
+        <Property key="ImageTexture" value="ed_icon_multiply.png"/>
+        <Property key="NeedKey" value="false"/>
+        <Property key="Visible" value="false"/>
+    </Widget>
+    <Widget type="Button" skin="StyledButtonSmall" position_real="0.18333333333333332 0.60277777777777775 0.61197916666666663 0.25833333333333336" name="Collect">
+        <Property key="Caption" value="#{COLLECT}"/>
+        <Property key="FontName" value="SM_ButtonSmall"/>
+        <Property key="TextAlign" value="Center"/>
+    </Widget>
+    <Widget type="Widget" skin="PanelEmpty" position_real="0 0 0 0" name="UnlockPanel">
+        <Property key="Visible" value="false"/>
+        <Widget type="TextBox" skin="TextBox" position_real="-nan(ind) -nan(ind) -nan(ind) -nan(ind)">
+            <Property key="Caption" value="#{UNLOCK}"/>
+            <Property key="FontName" value="SM_HeaderSmall"/>
+            <Property key="TextAlign" value="Center"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="-nan(ind) -nan(ind) -nan(ind) -nan(ind)" name="UnlockLevel">
+            <Property key="Caption" value="#{LEVEL} 12345"/>
+            <Property key="TextColour" value="0.5 0.5 0.5"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="SM_LabelMini"/>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings/>
+</MyGUI>

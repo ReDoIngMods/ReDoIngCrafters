@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Widget" skin="PanelEmpty" position="0 0 1566 914" align="Default" name="BackPanel">
+        <Property key="NeedKey" value="false"/>
+        <Property key="NeedMouse" value="false"/>
+        <Property key="InheritsPick" value="true"/>
+        <Widget type="ImageBox" skin="ImageBox" position="0 0 1244 914" name="Background">
+            <Property key="ImageTexture" value="$CONTENT_e05e0ad2-0a5f-46f9-98ab-b26c0a844922/Gui/Crafters/crafter_background_empty.png"/>
+            <Property key="NeedKey" value="false"/>
+            <Widget type="Widget" skin="SearchBarBackground" position="855 185 379 38" name="SearchBackground">
+                <Widget type="ImageBox" skin="ImageBox" position="344 8 19 19">
+                    <Property key="ImageTexture" value="gui_inventory_icon_search.png"/>
+                </Widget>
+                <Widget type="EditBox" skin="EditBoxEmpty" position="8 4 329 29" name="SearchBox">
+                    <Property key="Caption" value="#{SEARCH}"/>
+                    <Property key="FontName" value="SM_SearchText"/>
+                    <Property key="TextColour" value="0.576471 0.576471 0.584314"/>
+                    <Property key="TextAlign" value="Left VCenter"/>
+                    <Property key="MaxTextLength" value="128"/>
+                </Widget>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="306 101 651 38" name="Title">
+                <Property key="FontName" value="SM_HeaderLarge_Wide"/>
+                <Property key="Caption" value="#{CRAFTBOT_TITLE}"/>
+                <Property key="TextAlign" value="Center"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" position="74 229 116 44" name="All">
+                <Property key="NeedKey" value="false"/>
+                <Property key="FontName" value="SM_TabSmall"/>
+                <Property key="Caption" value="#{ALL_CAPS}"/>
+                <Property key="TextAlign" value="Center"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" position="190 229 170 44" name="tool">
+                <Property key="NeedKey" value="false"/>
+                <Property key="Caption" value="    #{PART_FILTER_TOOLS}"/>
+                <Property key="FontName" value="SM_TabSmall"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Widget type="ImageBox" skin="ImageBox" position="29 17 11 11" name="TypeIcon">
+                    <Property key="ImageResource" value="ItemTypeSet"/>
+                    <Property key="ImageGroup" value="ItemTypeColor"/>
+                    <Property key="ImageName" value="tool"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <Property key="NeedKey" value="false"/>
+                    <UserString key="Cmpnd_InheritColor" value="false"/>
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" position="360 229 170 44" name="block">
+                <Property key="NeedKey" value="false"/>
+                <Property key="Caption" value="    #{PART_FILTER_BLOCKS}"/>
+                <Property key="FontName" value="SM_TabSmall"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Widget type="ImageBox" skin="ImageBox" position="29 17 11 11" name="TypeIcon">
+                    <Property key="ImageResource" value="ItemTypeSet"/>
+                    <Property key="ImageGroup" value="ItemTypeColor"/>
+                    <Property key="ImageName" value="block"/>
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <UserString key="Cmpnd_InheritColor" value="false"/>
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" position="530 229 185 44" name="interactive">
+                <Property key="NeedKey" value="false"/>
+                <Property key="Caption" value="    #{PART_FILTER_INTERACTIVE}"/>
+                <Property key="FontName" value="SM_TabSmall"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Widget type="ImageBox" skin="ImageBox" position="29 17 11 11" name="TypeIcon">
+                    <Property key="ImageResource" value="ItemTypeSet"/>
+                    <Property key="ImageGroup" value="ItemTypeColor"/>
+                    <Property key="ImageName" value="interactive"/>
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <UserString key="Cmpnd_InheritColor" value="false"/>
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" position="715 229 170 44" name="part">
+                <Property key="NeedKey" value="false"/>
+                <Property key="Caption" value="    #{PART_FILTER_PARTS}"/>
+                <Property key="FontName" value="SM_TabSmall"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Widget type="ImageBox" skin="ImageBox" position="29 17 11 11" name="TypeIcon">
+                    <Property key="ImageResource" value="ItemTypeSet"/>
+                    <Property key="ImageGroup" value="ItemTypeColor"/>
+                    <Property key="ImageName" value="part"/>
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <UserString key="Cmpnd_InheritColor" value="false"/>
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" position="885 229 210 44" name="consumable">
+                <Property key="NeedKey" value="false"/>
+                <Property key="Caption" value="    #{PART_FILTER_CONSUMABLE}"/>
+                <Property key="FontName" value="SM_TabSmall"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Widget type="ImageBox" skin="ImageBox" position="29 17 11 11" name="TypeIcon">
+                    <Property key="ImageResource" value="ItemTypeSet"/>
+                    <Property key="ImageGroup" value="ItemTypeColor"/>
+                    <Property key="ImageName" value="consumable"/>
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <UserString key="Cmpnd_InheritColor" value="false"/>
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="UpgradeButton" position="1058 107 134 68" name="Upgrade"/>
+            <Widget type="Button" skin="UpgradeButton" position="1058 107 134 68" name="UpgradeInactive">
+                <Property key="Enabled" value="false"/>
+            </Widget>
+            <Widget type="Widget" skin="PanelEmpty" position="1058 107 134 68" name="UpgradeIngredientInfo">
+                <Property key="FontName" value="Default"/>
+                <Property key="NeedMouse" value="false"/>
+                <Widget type="TextBox" skin="TextBox" position="14 13 104 17">
+                    <Property key="Caption" value="#{CONTROLLER_UPGRADE}"/>
+                    <Property key="TextAlign" value="Center"/>
+                    <Property key="FontName" value="SM_ButtonTiny"/>
+                    <Property key="NeedMouse" value="false"/>
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" position="59 31 59 17" name="UpgradeCost">
+                    <Property key="FontName" value="SM_NumberMini"/>
+                    <Property key="TextAlign" value="Left VCenter"/>
+                    <Property key="Caption" value="00 / 00"/>
+                    <Property key="NeedMouse" value="false"/>
+                </Widget>
+                <Widget type="ImageBox" skin="ImageBox" position="37 31 19 19">
+                    <Property key="ImageTexture" value="gui_icon_components.png"/>
+                    <Property key="NeedMouse" value="false"/>
+                </Widget>
+            </Widget>
+            <Widget type="ItemBox" skin="BeaconItemBox" position="77 275 1148 450" name="RecipeGrid">
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="306 142 651 29" name="SubTitle">
+                <Property key="Caption" value="#{LEVEL} 12345"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="TextColour" value="1 0.803922 0.247059"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="0 734 1244 180" name="UnlockedSlots">
+                <Property key="ImageResource" value="CraftbotQueueUnlocked"/>
+                <Property key="ImageGroup" value="Count"/>
+                <Property key="ImageIndex" value="0"/>
+                <Property key="ImageName" value="4"/>
+                <Widget type="ImageBox" skin="ImageBox" position="0 0 1244 180" name="CompletedSlots">
+                    <Property key="ImageResource" value="CraftbotQueueActive"/>
+                    <Property key="ImageGroup" value="Count"/>
+                    <Property key="ImageName" value="2"/>
+                </Widget>
+            </Widget>
+            <Widget type="ItemBox" skin="InventoryItemBox2" position="38 737 1206 173" name="ProcessGrid">
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="1200 782 44 86" name="PipeConnection">
+                <Property key="ImageTexture" value="gui_icon_craftbot_pipe.png"/>
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="848 101 208 77" name="UpgradeInfo">
+                <Property key="FontName" value="SM_LabelTiny"/>
+                <Property key="TextAlign" value="Right VCenter"/>
+                <Property key="TextColour" value="0.623529 0.619608 0.619608"/>
+            </Widget>
+			<Widget type="Button" skin="ButtonImage" position="1091 741 17 17" name="Cancel0">
+            <Property key="Caption" value="X"/>
+            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonImage" position="942 741 17 17" name="Cancel1">
+            <Property key="Caption" value="X"/>
+            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonImage" position="793 741 17 17" name="Cancel2">
+            <Property key="Caption" value="X"/>
+            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonImage" position="644 741 17 17" name="Cancel3">
+            <Property key="Caption" value="X"/>
+            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonImage" position="495 741 17 17" name="Cancel4">
+            <Property key="Caption" value="X"/>
+            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonImage" position="346 741 17 17" name="Cancel5">
+            <Property key="Caption" value="X"/>
+            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonImage" position="197 741 17 17" name="Cancel6">
+            <Property key="Caption" value="X"/>
+            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonImage" position="48 741 17 17" name="Cancel7">
+            <Property key="Caption" value="X"/>
+            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="1070 735 60 40" name="Stuck0">
+            <Property key="Visible" value="false"/>
+            <Property key="ImageTexture" value="ed_error_tile.png"/>
+            <Property key="NeedMouse" value="false"/>
+            <Property key="NeedKey" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="921 735 60 40" name="Stuck1">
+            <Property key="Visible" value="false"/>
+            <Property key="ImageTexture" value="ed_error_tile.png"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="NeedMouse" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="772 735 60 40" name="Stuck2">
+            <Property key="Visible" value="false"/>
+            <Property key="ImageTexture" value="ed_error_tile.png"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="NeedMouse" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="623 735 60 40" name="Stuck3">
+            <Property key="Visible" value="false"/>
+            <Property key="ImageTexture" value="ed_error_tile.png"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="NeedMouse" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="474 735 60 40" name="Stuck4">
+            <Property key="Visible" value="false"/>
+            <Property key="ImageTexture" value="ed_error_tile.png"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="NeedMouse" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="325 735 60 40" name="Stuck5">
+            <Property key="Visible" value="false"/>
+            <Property key="ImageTexture" value="ed_error_tile.png"/>
+            <Property key="NeedMouse" value="false"/>
+            <Property key="NeedKey" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="176 735 60 40" name="Stuck6">
+            <Property key="Visible" value="false"/>
+            <Property key="ImageTexture" value="ed_error_tile.png"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="NeedMouse" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="27 735 60 40" name="Stuck7">
+            <Property key="Visible" value="false"/>
+            <Property key="ImageTexture" value="ed_error_tile.png"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="NeedMouse" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CraftbotRepeat" position="1173 743 17 17" name="Repeat0">
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CraftbotRepeat" position="1024 743 17 17" name="Repeat1">
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CraftbotRepeat" position="875 743 17 17" name="Repeat2">
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CraftbotRepeat" position="726 743 17 17" name="Repeat3">
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CraftbotRepeat" position="577 743 17 17" name="Repeat4">
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CraftbotRepeat" position="428 743 17 17" name="Repeat5">
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CraftbotRepeat" position="279 743 17 17" name="Repeat6">
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CraftbotRepeat" position="130 743 17 17" name="Repeat7">
+            <Property key="Visible" value="false"/>
+        </Widget>
+        </Widget>
+        <Widget type="Widget" skin="BackgroundCraftbotTooltip" position="1265 59 300 854" name="SideMainPanel">
+            <Widget type="Canvas" skin="Canvas" position="0 0 300 209" name="Preview">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="50 20 200 200" name="PreviewImage">
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+            </Widget>
+            <Widget type="EditBox" skin="EditBoxEmpty" position="21 191 258 56" name="ItemName">
+                <Property key="Caption" value="This is a very long title on two rows"/>
+                <Property key="FontName" value="SM_ItemTitle"/>
+                <Property key="WordWrap" value="true"/>
+                <Property key="ReadOnly" value="true"/>
+                <Property key="Static" value="true"/>
+                <Property key="TextAlign" value="Left Bottom"/>
+            </Widget>
+            <Widget type="EditBox" skin="EditBoxEmpty" position="21 482 259 138" name="ItemDescription">
+                <Property key="Static" value="true"/>
+                <Property key="ReadOnly" value="true"/>
+                <Property key="WordWrap" value="true"/>
+                <Property key="TextShadowColour" value="0 0 0"/>
+                <Property key="FontName" value="SM_TextTiny"/>
+                <Property key="TextColour" value="0.564706 0.572549 0.572549"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="21 446 258 20">
+                <Property key="FontName" value="SM_LabelTiny"/>
+                <Property key="Caption" value="#{DESCRIPTION_CAPS}"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="190 287 7 14" name="Weight_1">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="199 287 7 14" name="Weight_2">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="208 287 7 14" name="Weight_3">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="217 287 7 14" name="Weight_4">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="226 287 7 14" name="Weight_5">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="235 287 7 14" name="Weight_6">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="244 287 7 14" name="Weight_7">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="253 287 7 14" name="Weight_8">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="262 287 7 14" name="Weight_9">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="271 287 7 14" name="Weight_10">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="190 317 7 14" name="Durability_1">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="199 317 7 14" name="Durability_2">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="208 317 7 14" name="Durability_3">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="217 317 7 14" name="Durability_4">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="226 317 7 14" name="Durability_5">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="235 317 7 14" name="Durability_6">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="244 317 7 14" name="Durability_7">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="253 317 7 14" name="Durability_8">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="262 317 7 14" name="Durability_9">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="271 317 7 14" name="Durability_10">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="190 347 7 14" name="Friction_1">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="199 347 7 14" name="Friction_2">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="208 347 7 14" name="Friction_3">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="217 347 7 14" name="Friction_4">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="226 347 7 14" name="Friction_5">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="235 347 7 14" name="Friction_6">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="244 347 7 14" name="Friction_7">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="253 347 7 14" name="Friction_8">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="262 347 7 14" name="Friction_9">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="271 347 7 14" name="Friction_10">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="190 377 7 14" name="Buoyancy_1">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="199 377 7 14" name="Buoyancy_2">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="208 377 7 14" name="Buoyancy_3">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="217 377 7 14" name="Buoyancy_4">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="226 377 7 14" name="Buoyancy_5">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="235 377 7 14" name="Buoyancy_6">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="244 377 7 14" name="Buoyancy_7">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="253 377 7 14" name="Buoyancy_8">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="262 377 7 14" name="Buoyancy_9">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" position="271 377 7 14" name="Buoyancy_10">
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="21 287 15 14">
+                <Property key="ImageTexture" value="gui_inventory_icon_weight.png"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="21 317 15 14">
+                <Property key="ImageTexture" value="gui_inventory_icon_durability.png"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="21 347 15 14">
+                <Property key="ImageTexture" value="gui_inventory_icon_friction.png"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="21 377 15 14">
+                <Property key="ImageTexture" value="gui_inventory_icon_buoyancy.png"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="21 407 15 14">
+                <Property key="ImageTexture" value="gui_inventory_icon_flammable.png"/>
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" position="21 308 258 1" name="Line">
+                <Property key="Colour" value="1 1 1"/>
+                <Property key="Alpha" value="0.2"/>
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" position="21 338 258 1" name="Line">
+                <Property key="Colour" value="1 1 1"/>
+                <Property key="Alpha" value="0.2"/>
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" position="21 368 258 1" name="Line">
+                <Property key="Colour" value="1 1 1"/>
+                <Property key="Alpha" value="0.2"/>
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" position="21 398 258 1" name="Line">
+                <Property key="Colour" value="1 1 1"/>
+                <Property key="Alpha" value="0.2"/>
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" position="21 476 258 1" name="Line">
+                <Property key="Colour" value="1 1 1"/>
+                <Property key="Alpha" value="0.2"/>
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" position="21 656 258 1" name="Line">
+                <Property key="Colour" value="1 1 1"/>
+                <Property key="Alpha" value="0.2"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="42 284 120 20">
+                <Property key="Caption" value="#{PROPERTY_WEIGHT}"/>
+                <Property key="FontName" value="SM_LabelTiny"/>
+                <Property key="Alpha" value="0.5"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="42 314 120 20">
+                <Property key="Caption" value="#{PROPERTY_DURABILITY}"/>
+                <Property key="FontName" value="SM_LabelTiny"/>
+                <Property key="Alpha" value="0.5"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="42 344 120 20">
+                <Property key="Caption" value="#{PROPERTY_FRICTION}"/>
+                <Property key="FontName" value="SM_LabelTiny"/>
+                <Property key="Alpha" value="0.5"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="42 374 120 20">
+                <Property key="Caption" value="#{PROPERTY_BUOYANCY}"/>
+                <Property key="FontName" value="SM_LabelTiny"/>
+                <Property key="Alpha" value="0.5"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="42 404 120 20">
+                <Property key="Caption" value="#{PROPERTY_FLAMMABLE}"/>
+                <Property key="FontName" value="SM_LabelTiny"/>
+                <Property key="Alpha" value="0.5"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="222 404 60 20" name="FlammableText">
+                <Property key="FontName" value="SM_HeaderTiny"/>
+                <Property key="Caption" value="#{MENU_YN_YES}#{MENU_YN_NO}"/>
+                <Property key="TextAlign" value="Right VCenter"/>
+                <Property key="TextColour" value="1 0.815686 0.27451"/>
+            </Widget>
+            <Widget type="Button" skin="StyledButtonLarge" position="18 758 264 68" name="Craft">
+                <Property key="Caption" value="#{CRAFT}"/>
+                <Property key="FontName" value="SM_Button"/>
+                <Property key="TextAlign" value="Center"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="21 626 96 23">
+                <Property key="Caption" value="#{MATERIAL}"/>
+                <Property key="FontName" value="SM_HeaderTiny"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+            </Widget>
+            <Widget type="ItemBox" skin="InventoryItemBox2" position="18 660 275 96" name="MaterialGrid">
+                <Property key="NeedToolTip" value="true"/>
+                <Widget type="Widget" skin="PanelEmpty" position="0 0 66 85" align="Left Top" name="Material1">
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <Widget type="TextBox" skin="TextBox" position="0 67 66 20" name="QuantityMaterial1">
+                        <Property key="Caption" value="1/0"/>
+                        <Property key="FontName" value="SM_NumberTiny"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="NeedKey" value="false"/>
+                        <Property key="NeedMouse" value="false"/>
+                    </Widget>
+                </Widget>
+                <Widget type="Widget" skin="PanelEmpty" position="66 0 66 85" align="Left Top" name="Material2">
+                    <Property key="NeedMouse" value="false"/>
+                    <Property key="NeedKey" value="false"/>
+                    <Widget type="TextBox" skin="TextBox" position="0 67 66 20" name="QuantityMaterial2">
+                        <Property key="Caption" value="1/0"/>
+                        <Property key="FontName" value="SM_NumberTiny"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="NeedKey" value="false"/>
+                        <Property key="NeedMouse" value="false"/>
+                    </Widget>
+                </Widget>
+                <Widget type="Widget" skin="PanelEmpty" position="132 0 66 85" align="Left Top" name="Material3">
+                    <Property key="NeedMouse" value="false"/>
+                    <Property key="NeedKey" value="false"/>
+                    <Widget type="TextBox" skin="TextBox" position="0 67 66 20" name="QuantityMaterial3">
+                        <Property key="Caption" value="1/0"/>
+                        <Property key="FontName" value="SM_NumberTiny"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="NeedKey" value="false"/>
+                        <Property key="NeedMouse" value="false"/>
+                    </Widget>
+                </Widget>
+                <Widget type="Widget" skin="PanelEmpty" position="198 0 66 85" align="Left Top" name="Material4">
+                    <Property key="NeedMouse" value="false"/>
+                    <Property key="NeedKey" value="false"/>
+                    <Widget type="TextBox" skin="TextBox" position="0 67 66 20" name="QuantityMaterial4">
+                        <Property key="Caption" value="1/0"/>
+                        <Property key="FontName" value="SM_NumberTiny"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="NeedKey" value="false"/>
+                        <Property key="NeedMouse" value="false"/>
+                    </Widget>
+                </Widget>
+            </Widget>
+            <Widget type="ItemBox" skin="InventoryItemBox2" position="254 17 55 189" name="ExtraGrid">
+                <Property key="NeedToolTip" value="true"/>
+                <Widget type="Widget" skin="PanelEmpty" position="0 0 33 42" align="Left Top" name="Extra1">
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <Widget type="TextBox" skin="TextBox" position="0 28 33 14" name="QuantityExtra1">
+                        <Property key="Caption" value="1/0"/>
+                        <Property key="FontName" value="SM_NumberTiny"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="NeedKey" value="false"/>
+                        <Property key="NeedMouse" value="false"/>
+                    </Widget>
+                </Widget>
+                <Widget type="Widget" skin="PanelEmpty" position="0 126 33 42" align="Left Top" name="Extra4">
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <Widget type="TextBox" skin="TextBox" position="0 28 33 14" name="QuantityExtra4">
+                        <Property key="Caption" value="1/0"/>
+                        <Property key="FontName" value="SM_NumberTiny"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="NeedKey" value="false"/>
+                        <Property key="NeedMouse" value="false"/>
+                    </Widget>
+                </Widget>
+                <Widget type="Widget" skin="PanelEmpty" position="0 84 33 42" align="Left Top" name="Extra3">
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <Widget type="TextBox" skin="TextBox" position="0 28 33 14" name="QuantityExtra3">
+                        <Property key="Caption" value="1/0"/>
+                        <Property key="FontName" value="SM_NumberTiny"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="NeedKey" value="false"/>
+                        <Property key="NeedMouse" value="false"/>
+                    </Widget>
+                </Widget>
+                <Widget type="Widget" skin="PanelEmpty" position="0 42 33 42" align="Left Top" name="Extra2">
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <Widget type="TextBox" skin="TextBox" position="0 28 33 14" name="QuantityExtra2">
+                        <Property key="Caption" value="1/0"/>
+                        <Property key="FontName" value="SM_NumberTiny"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="NeedKey" value="false"/>
+                        <Property key="NeedMouse" value="false"/>
+                    </Widget>
+                </Widget>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="180 626 99 23" name="Time">
+                <Property key="Caption" value="04:20"/>
+                <Property key="FontName" value="SM_HeaderTiny"/>
+                <Property key="TextAlign" value="Right VCenter"/>
+                <Property key="TextColour" value="1 0.815686 0.27451"/>
+            </Widget>
+            <Widget type="Button" skin="GenderButton" position="280 660 20 85" name="MaterialNext">
+                <Property key="NeedKey" value="false"/>
+                <Widget type="TextBox" skin="TextBox" position="0 0 20 85">
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <Property key="Caption" value="&gt;"/>
+                    <Property key="TextAlign" value="Center"/>
+                    <Property key="FontName" value="DejaVuSansFontGenerated_15"/>
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="GenderButton" position="0 660 20 85" name="MaterialPrev">
+                <Property key="NeedKey" value="false"/>
+                <Widget type="TextBox" skin="TextBox" position="0 0 20 85">
+                    <Property key="NeedKey" value="false"/>
+                    <Property key="NeedMouse" value="false"/>
+                    <Property key="Caption" value="&lt;"/>
+                    <Property key="TextAlign" value="Center"/>
+                    <Property key="FontName" value="DejaVuSansFontGenerated_15"/>
+                </Widget>
+            </Widget>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings/>
+</MyGUI>
