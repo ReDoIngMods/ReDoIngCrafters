@@ -858,7 +858,7 @@ function Crafter:sv_handleRecipeFinish( val, idx )
 		--print("val.recipe.craftTimeout: ", val.recipe.craftTimeout)
 		if val.recipe.craftTimeout then
 			table.remove( self.sv.craftArray, idx )
-			if val.loop and #self.sv.pipeGraphs["input"].containers > 0 then
+			if val.loop and #self.sv.pipeGraphs["input"].containers > 0 and #self.sv.pipeGraphs["output"].containers > 0 then
 				local newRecipe = val.recipe
 				--new--recipe.craftTimeout = false
 				self:sv_craft( { recipe = newRecipe, loop = true } )
