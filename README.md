@@ -31,7 +31,7 @@ Code and Art originally made for Crashlander, adapted for general use.
 	- Description Scrollbar (scrolling still possible)
 	
 # Documentation
-Documentation is contained within the scripts themselves (*this*/Scripts/...)
+Documentation is contained within the scripts themselves `Mod/Scripts/...`
 	
 # Installation
 Refer to [Installation](INSTALLATION.md)
