@@ -19,6 +19,7 @@ Code and Art originally made for Crashlander, adapted for general use.
 	- Extra Crafted Items shown
 	- More than 4 Ingredients shown
 	- Infinite (non-stop) looped recipes
+	- Ingredients taken from pipe system and inventory at the same time (only for non-looping recipes)
 	- Proper Recipe Craft Times displayed
 - Performance
 	- Faster Recipe Loading (less lag when recipes get loaded)
