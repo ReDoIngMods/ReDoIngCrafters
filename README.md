@@ -25,13 +25,13 @@ Code and Art originally made for Crashlander, adapted for general use.
 	- Slower Material Updating (to reduce lag with huge pipe system)
 	- Search Text Buffering
 - Other
-	- Carryable Items can't be Automated, stay in the Crafting Queue and get Collected into the Player's Carry
+	- Carryable Items can't be Automated, they stay in the Crafting Queue and get Collected into the Player's Carry
 - Removed Features
 	- Scrolling while Hovering over the Items in the Crafting Menu
 	- Description Scrollbar (scrolling still possible)
 	
 # Documentation
-Documentation is contained within the scripts themselves (Mod/Scripts/...)
+Documentation is contained within the scripts themselves (*this*/Scripts/...)
 	
 # Installation
 Refer to [Installation](INSTALLATION.md)
