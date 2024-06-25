@@ -295,14 +295,16 @@
                 <Property key="Static" value="true" />
                 <Property key="TextAlign" value="Left Bottom" />
             </Widget>
-            <Widget type="EditBox" skin="EditBoxEmpty" name="ItemDescription" position_real="0.07 0.5644028103044496 0.8633333333333333 0.16159250585480095">
-                <Property key="Static" value="true" />
-                <Property key="ReadOnly" value="true" />
+            <Widget type="EditBox" skin="PhotoDescription" name="ItemDescription" position_real="0.07 0.5644028103044496 0.9266666666666666 0.16159250585480095">
                 <Property key="WordWrap" value="true" />
                 <Property key="TextShadowColour" value="0 0 0" />
                 <Property key="FontName" value="SM_TextTiny" />
-                <Property key="TextColour" value="0.564706 0.572549 0.572549" />
+                <Property key="TextColour" value="0.97076 0.97076 0.97076" />
                 <Property key="NeedKey" value="false" />
+                <Property key="MultiLine" value="true" />
+                <Property key="Static" value="true" />
+                <Property key="ReadOnly" value="true" />
+                <Property key="Caption" value="sdwadcdwadwdawdwadwd" />
             </Widget>
             <Widget type="TextBox" skin="TextBox" position_real="0.07 0.522248243559719 0.86 0.0234192037470726">
                 <Property key="FontName" value="SM_LabelTiny" />

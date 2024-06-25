@@ -157,126 +157,126 @@
                 <Property key="TextAlign" value="Right VCenter"/>
                 <Property key="TextColour" value="0.623529 0.619608 0.619608"/>
             </Widget>
-			<Widget type="Button" skin="ButtonImage" position="1091 741 17 17" name="Cancel0">
-            <Property key="Caption" value="X"/>
-            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
-            <Property key="TextAlign" value="Center"/>
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="ButtonImage" position="942 741 17 17" name="Cancel1">
-            <Property key="Caption" value="X"/>
-            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
-            <Property key="TextAlign" value="Center"/>
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="ButtonImage" position="793 741 17 17" name="Cancel2">
-            <Property key="Caption" value="X"/>
-            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
-            <Property key="TextAlign" value="Center"/>
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="ButtonImage" position="644 741 17 17" name="Cancel3">
-            <Property key="Caption" value="X"/>
-            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
-            <Property key="TextAlign" value="Center"/>
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="ButtonImage" position="495 741 17 17" name="Cancel4">
-            <Property key="Caption" value="X"/>
-            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
-            <Property key="TextAlign" value="Center"/>
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="ButtonImage" position="346 741 17 17" name="Cancel5">
-            <Property key="Caption" value="X"/>
-            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
-            <Property key="TextAlign" value="Center"/>
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="ButtonImage" position="197 741 17 17" name="Cancel6">
-            <Property key="Caption" value="X"/>
-            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
-            <Property key="TextAlign" value="Center"/>
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="ButtonImage" position="48 741 17 17" name="Cancel7">
-            <Property key="Caption" value="X"/>
-            <Property key="FontName" value="SM_HeaderLarge_Medium"/>
-            <Property key="TextAlign" value="Center"/>
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="1070 735 60 40" name="Stuck0">
-            <Property key="Visible" value="false"/>
-            <Property key="ImageTexture" value="ed_error_tile.png"/>
-            <Property key="NeedMouse" value="false"/>
-            <Property key="NeedKey" value="false"/>
-        </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="921 735 60 40" name="Stuck1">
-            <Property key="Visible" value="false"/>
-            <Property key="ImageTexture" value="ed_error_tile.png"/>
-            <Property key="NeedKey" value="false"/>
-            <Property key="NeedMouse" value="false"/>
-        </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="772 735 60 40" name="Stuck2">
-            <Property key="Visible" value="false"/>
-            <Property key="ImageTexture" value="ed_error_tile.png"/>
-            <Property key="NeedKey" value="false"/>
-            <Property key="NeedMouse" value="false"/>
-        </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="623 735 60 40" name="Stuck3">
-            <Property key="Visible" value="false"/>
-            <Property key="ImageTexture" value="ed_error_tile.png"/>
-            <Property key="NeedKey" value="false"/>
-            <Property key="NeedMouse" value="false"/>
-        </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="474 735 60 40" name="Stuck4">
-            <Property key="Visible" value="false"/>
-            <Property key="ImageTexture" value="ed_error_tile.png"/>
-            <Property key="NeedKey" value="false"/>
-            <Property key="NeedMouse" value="false"/>
-        </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="325 735 60 40" name="Stuck5">
-            <Property key="Visible" value="false"/>
-            <Property key="ImageTexture" value="ed_error_tile.png"/>
-            <Property key="NeedMouse" value="false"/>
-            <Property key="NeedKey" value="false"/>
-        </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="176 735 60 40" name="Stuck6">
-            <Property key="Visible" value="false"/>
-            <Property key="ImageTexture" value="ed_error_tile.png"/>
-            <Property key="NeedKey" value="false"/>
-            <Property key="NeedMouse" value="false"/>
-        </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="27 735 60 40" name="Stuck7">
-            <Property key="Visible" value="false"/>
-            <Property key="ImageTexture" value="ed_error_tile.png"/>
-            <Property key="NeedKey" value="false"/>
-            <Property key="NeedMouse" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="CraftbotRepeat" position="1173 743 17 17" name="Repeat0">
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="CraftbotRepeat" position="1024 743 17 17" name="Repeat1">
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="CraftbotRepeat" position="875 743 17 17" name="Repeat2">
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="CraftbotRepeat" position="726 743 17 17" name="Repeat3">
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="CraftbotRepeat" position="577 743 17 17" name="Repeat4">
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="CraftbotRepeat" position="428 743 17 17" name="Repeat5">
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="CraftbotRepeat" position="279 743 17 17" name="Repeat6">
-            <Property key="Visible" value="false"/>
-        </Widget>
-        <Widget type="Button" skin="CraftbotRepeat" position="130 743 17 17" name="Repeat7">
-            <Property key="Visible" value="false"/>
-        </Widget>
+            <Widget type="Button" skin="ButtonImage" position="1091 741 17 17" name="Cancel0">
+                <Property key="Caption" value="X"/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonImage" position="942 741 17 17" name="Cancel1">
+                <Property key="Caption" value="X"/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonImage" position="793 741 17 17" name="Cancel2">
+                <Property key="Caption" value="X"/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonImage" position="644 741 17 17" name="Cancel3">
+                <Property key="Caption" value="X"/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonImage" position="495 741 17 17" name="Cancel4">
+                <Property key="Caption" value="X"/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonImage" position="346 741 17 17" name="Cancel5">
+                <Property key="Caption" value="X"/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonImage" position="197 741 17 17" name="Cancel6">
+                <Property key="Caption" value="X"/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonImage" position="48 741 17 17" name="Cancel7">
+                <Property key="Caption" value="X"/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="1070 735 60 40" name="Stuck0">
+                <Property key="Visible" value="false"/>
+                <Property key="ImageTexture" value="ed_error_tile.png"/>
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="921 735 60 40" name="Stuck1">
+                <Property key="Visible" value="false"/>
+                <Property key="ImageTexture" value="ed_error_tile.png"/>
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="772 735 60 40" name="Stuck2">
+                <Property key="Visible" value="false"/>
+                <Property key="ImageTexture" value="ed_error_tile.png"/>
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="623 735 60 40" name="Stuck3">
+                <Property key="Visible" value="false"/>
+                <Property key="ImageTexture" value="ed_error_tile.png"/>
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="474 735 60 40" name="Stuck4">
+                <Property key="Visible" value="false"/>
+                <Property key="ImageTexture" value="ed_error_tile.png"/>
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="325 735 60 40" name="Stuck5">
+                <Property key="Visible" value="false"/>
+                <Property key="ImageTexture" value="ed_error_tile.png"/>
+                <Property key="NeedMouse" value="false"/>
+                <Property key="NeedKey" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="176 735 60 40" name="Stuck6">
+                <Property key="Visible" value="false"/>
+                <Property key="ImageTexture" value="ed_error_tile.png"/>
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position="27 735 60 40" name="Stuck7">
+                <Property key="Visible" value="false"/>
+                <Property key="ImageTexture" value="ed_error_tile.png"/>
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotRepeat" position="1173 743 17 17" name="Repeat0">
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotRepeat" position="1024 743 17 17" name="Repeat1">
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotRepeat" position="875 743 17 17" name="Repeat2">
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotRepeat" position="726 743 17 17" name="Repeat3">
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotRepeat" position="577 743 17 17" name="Repeat4">
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotRepeat" position="428 743 17 17" name="Repeat5">
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotRepeat" position="279 743 17 17" name="Repeat6">
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="CraftbotRepeat" position="130 743 17 17" name="Repeat7">
+                <Property key="Visible" value="false"/>
+            </Widget>
         </Widget>
         <Widget type="Widget" skin="BackgroundCraftbotTooltip" position="1265 59 300 854" name="SideMainPanel">
             <Widget type="Canvas" skin="Canvas" position="0 0 300 209" name="Preview">
@@ -295,14 +295,16 @@
                 <Property key="Static" value="true"/>
                 <Property key="TextAlign" value="Left Bottom"/>
             </Widget>
-            <Widget type="EditBox" skin="EditBoxEmpty" position="21 482 259 138" name="ItemDescription">
-                <Property key="Static" value="true"/>
-                <Property key="ReadOnly" value="true"/>
+            <Widget type="EditBox" skin="PhotoDescription" position="21 482 278 138" name="ItemDescription">
                 <Property key="WordWrap" value="true"/>
                 <Property key="TextShadowColour" value="0 0 0"/>
                 <Property key="FontName" value="SM_TextTiny"/>
-                <Property key="TextColour" value="0.564706 0.572549 0.572549"/>
+                <Property key="TextColour" value="0.97076 0.97076 0.97076"/>
                 <Property key="NeedKey" value="false"/>
+                <Property key="MultiLine" value="true"/>
+                <Property key="Static" value="true"/>
+                <Property key="ReadOnly" value="true"/>
+                <Property key="Caption" value="sdwadcdwadwdawdwadwd"/>
             </Widget>
             <Widget type="TextBox" skin="TextBox" position="21 446 258 20">
                 <Property key="FontName" value="SM_LabelTiny"/>

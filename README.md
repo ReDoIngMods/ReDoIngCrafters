@@ -29,7 +29,6 @@ Code and Art originally made for Crashlander, adapted for general use.
 	- Carryable Items can't be Automated, they stay in the Crafting Queue and get Collected into the Player's Carry
 - Removed Features
 	- Scrolling while Hovering over the Items in the Crafting Menu
-	- Description Scrollbar (scrolling still possible)
 	
 # Documentation
 Documentation is contained within the scripts themselves `Mod/Scripts/...`
