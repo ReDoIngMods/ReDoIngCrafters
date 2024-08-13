@@ -6,6 +6,7 @@
 -- ###################################
 --This is the main file of this sample mod. It contains the modified vanilla craftbot script and is a light modification of the Craftbot.lua found in "Crashlander".
 --Feel free to modify this code any way which suits you!
+--I also recommend that you check all the comments i made, there arent that many but pretty much all of them hide an unused feature (like crafter storage, which has a comment "Uncomment below and add the uuids of items with special containers" above them) and other neat things.
 
 --Sample crafters Item
 --[[
@@ -15,6 +16,7 @@
 		speed = 1, -- The crafting speed multiplier (doesn't multiply the 3 additional seconds added due to animations)
 		level = 1, -- The currect crafter level (optional)
 		upgrade = tostring( obj_craftbot_craftbot2 ), -- The next upgrade uuid (required for "automatic locked slot level population") (optional)
+		upgradeInfo = "#9F9E9EProperty#C4F42B Change", -- The text to be displayed next to the upgrade button (optional)
 		upgradeCost = 5, -- How many Component Kits the upgrade should take (optional)
 		recipeSets = { -- Available recipe sets
 			{ name = "craftbot", locked = false }
@@ -399,7 +401,7 @@ function Crafter.cl_init( self )
 	self.cl.tertiaryEffects = {}
 	self.cl.quaternaryEffects = {}
 
-	if shapeUuid == obj_auto_craftingbench or shapeUuid == obj_craftbot_craftbot1 or shapeUuid == obj_craftbot_craftbot2 or shapeUuid == obj_craftbot_craftbot3 or shapeUuid == obj_craftbot_craftbot4 or shapeUuid == obj_craftbot_craftbot5 then
+	if shapeUuid == obj_craftbot_craftbot1 or shapeUuid == obj_craftbot_craftbot2 or shapeUuid == obj_craftbot_craftbot3 or shapeUuid == obj_craftbot_craftbot4 or shapeUuid == obj_craftbot_craftbot5 then
 		self.cl.mainEffects["unfold"] = sm.effect.createEffect( "Craftbot - Unpack", self.interactable )
 		self.cl.mainEffects["idle"] = sm.effect.createEffect( "Craftbot - Idle", self.interactable )
 		self.cl.mainEffects["idlespecial01"] = sm.effect.createEffect( "Craftbot - IdleSpecial01", self.interactable )
@@ -444,7 +446,7 @@ function Crafter.cl_init( self )
 		self.cl.quaternaryEffects["craft_finish"] = sm.effect.createEffect( "ShapeRenderable", self.interactable, "food02_jnt" )
 
 
-	elseif shapeUuid == obj_mini_crafbot then
+	elseif shapeUuid == obj_survivalobject_workbench then
 
 		self.cl.mainEffects["craft_loop"] = sm.effect.createEffect( "Workbench - Work01", self.interactable )
 		self.cl.mainEffects["craft_finish"] = sm.effect.createEffect( "Workbench - Finish", self.interactable )
@@ -838,7 +840,7 @@ function Crafter:sv_tryPushFinishedRecipes()
 			local recipe = val.recipe
 			local recipeCraftTime = recipe.craftTimeout and 300 or math.ceil( recipe.craftTime / self.crafter.speed ) + 120 -- 1s windup + 2s winddown
 			if val.time >= recipeCraftTime then
-				if isSpawner then
+				if self.sv.saved and self.sv.saved.spawner then
 					print( "Spawning {"..recipe.itemId.."}" )
 					self:sv_spawn( self.sv.saved.spawner )
 				end
@@ -1390,11 +1392,12 @@ function Crafter:cl_updateCrafterAnims(deltaTime, prevAnimState, craftTimeRemain
 end
 
 function Crafter:doShowAnims()
-	if self.shape.uuid == obj_furnace then
-		return (self.cl.animName == "craft_start" and "craft_loop") or (self.cl.animName == "craft_finish" and nil) or self.cl.animName
-	else
+	--This function is used to replace certain animations the craftbot uses with different ones, see below where i replaced craft_start with craft_loop and removed craft_finish
+	--if self.shape.uuid == obj_furnace then
+		--return (self.cl.animName == "craft_start" and "craft_loop") or (self.cl.animName == "craft_finish" and nil) or self.cl.animName
+	--else
 		return self.cl.animName
-	end
+	--end
 end
 
 function Crafter.cl_disableAllAnimations( self )

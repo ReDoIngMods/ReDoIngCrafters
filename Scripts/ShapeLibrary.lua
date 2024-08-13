@@ -22,7 +22,7 @@ local function ParseList(list)
     if not list then return end
 
     for i, shape in pairs(list) do
-		local stackSize = shape.stackSize or (shape.dif and 256) or 1 --sm.item.isBlock(sm.uuid.new(shape.uuid)) doesn't work, because SM. So i'm using the janky way to get if it is a block (shape.dif) - The Red Builder
+		--local stackSize = shape.stackSize or (shape.dif and 256) or 1 --sm.item.isBlock(sm.uuid.new(shape.uuid)) doesn't work, because SM. So i'm using the janky way to get if it is a block (shape.dif) - The Red Builder
         ShapeLibrary[shape.uuid] = {
 			carryItem = shape.carryItem or false,
 			flammable = shape.flammable or false,
@@ -67,7 +67,7 @@ ModDatabase.unloadShapesets()
 ---@param uuid Uuid
 ---@return ShapeData
 function GetShapeData(uuid)
-	local stackSize = sm.item.isBlock(sm.uuid.new(tostring(uuid))) and 256 or 1 -- it works here, as that gets called after the game fully loads
+	--local stackSize = sm.item.isBlock(sm.uuid.new(tostring(uuid))) and 256 or 1 -- it works here, as that gets called after the game fully loads
     return ShapeLibrary[tostring(uuid)] or { carryItem = false, flammable = false, ratings = {
 		density = 4,
 		durability = 3,
