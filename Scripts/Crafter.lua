@@ -389,7 +389,7 @@ function Crafter.cl_init( self )
 	self.cl.chosenIndex = 0
 	self.cl.materialOffset = 0
 	self.cl.lastSelectedItem = {}
-	self.cl.itemFilters = {cat = "All", search = "#{SEARCH}", tick = 6}
+	self.cl.itemFilters = {cat = "All", search = "#{SEARCH}", tick = 4}
 
 	self.cl.currentMainEffect = nil
 	self.cl.currentSecondaryEffect = nil
@@ -960,10 +960,10 @@ function Crafter.client_onFixedUpdate( self )
 		if sm.game.getCurrentTick() % 60 == 0 then --The time it takes for the materials gui to refresh (like the amount of resources and stuff)
 			self:cl_updateMaterialsGrid()
 		end
-		if self.cl.itemFilters.tick == 5 then
+		if self.cl.itemFilters.tick == 3 then
 			self:cl_setFilter()
 		end
-		if self.cl.itemFilters.tick < 6 then
+		if self.cl.itemFilters.tick < 4 then
 			self.cl.itemFilters.tick = self.cl.itemFilters.tick + 1
 		end
 	end
